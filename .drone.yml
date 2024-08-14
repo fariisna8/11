@@ -1,11 +1,10 @@
+---
 kind: pipeline
 type: docker
-name: chess_CI_Pipeline
-trigger:
-  event:
-    - push
+name: default
+
 steps:
-  - name: build
-    image: mcr.microsoft.com/dotnet/sdk:8.0
-    commands:
-      - lscpu
+- name: greeting
+  image: golang:1.12
+  commands:
+  - lscpu
